@@ -32,7 +32,7 @@ export default function Content({ darkMode, idxContent, setIdxContent }) {
             project[0].imagePath.map((img, index) => (
               <img
                 key={index}
-                src={img}
+                src={`${process.env.NODE_ENV === "production" ? "/laurentius-profile" : ""}${img}`}
                 alt={`${project.projectName} ${index + 1}`}
                 className="w-full h-auto my-4"
               />
