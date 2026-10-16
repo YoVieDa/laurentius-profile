@@ -79,7 +79,7 @@ export default function Index({ darkMode, setIdxContent, setCurrentPage }) {
               onClick={() => {setIdxContent(data.id); setCurrentPage("content");}}
             >
               <img
-                src={data.imageTitlePath}
+                src={`${process.env.NODE_ENV === "production" ? "/laurentius-profile" : ""}${data.imageTitlePath}`}
                 alt={data.projectName}
                 className="w-full h-auto"
               />
