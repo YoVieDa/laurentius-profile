@@ -7,7 +7,6 @@ const cousine = Cousine({
 });
 
 export default function RootLayout({ children }) {
-  const [darkMode, setDarkMode] = useState(true);
   return (
     <html lang="en">
       <body className={cousine.className}>
